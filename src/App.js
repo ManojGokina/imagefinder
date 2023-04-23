@@ -16,7 +16,7 @@ function App() {
   const [fetching, setFetching] = useState(false);
   const fetchRef = useRef(fetching);
 
-  function getUnsplashImages(query, page = 1) {
+  function getUnsplashImages(query, page = 5) {
     setFetching(true);
     fetchRef.current = true;
     return new Promise((resolve, reject) => {
@@ -39,7 +39,7 @@ function App() {
     if (phrase !== "") {
       debounce(() => {
         setImages([]);
-        getUnsplashImages(phrase, 1).then((images) => {
+        getUnsplashImages(phrase, 5).then((images) => {
           setImages(images);
           imagesRef.current = images;
         });
@@ -86,7 +86,7 @@ function App() {
       <div id="gallery">
         {images.length > 0 &&
           images.map((url) => (
-              <img src={url} key={url} />
+              <img src={url} key={url} alt="apiImages" />
           ))}
       </div>
     </div>
