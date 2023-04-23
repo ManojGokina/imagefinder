@@ -47,27 +47,27 @@ function App() {
     }
   }, [phrase]);
 
-  function handleScroll(e) {
-    const { scrollHeight, scrollTop, clientHeight } = e.target.scrollingElement;
+  // function handleScroll(e) {
+  //   const { scrollHeight, scrollTop, clientHeight } = e.target.scrollingElement;
 
-    const isBottom = scrollHeight - scrollTop <= clientHeight;
+  //   const isBottom = scrollHeight - scrollTop <= clientHeight;
 
-    if (isBottom && !fetchRef.current) {
-      getUnsplashImages(
-        phraseRef.current,
-        imagesRef.current.length / 5 + 1
-      ).then((newImgs) => {
-        imagesRef.current = [...imagesRef.current, ...newImgs];
-        setImages(imagesRef.current);
-      });
-    }
-  }
+  //   if (isBottom && !fetchRef.current) {
+  //     getUnsplashImages(
+  //       phraseRef.current,
+  //       imagesRef.current.length / 5 + 1
+  //     ).then((newImgs) => {
+  //       imagesRef.current = [...imagesRef.current, ...newImgs];
+  //       setImages(imagesRef.current);
+  //     });
+  //   }
+  // }
 
-  useEffect(() => {
-    document.addEventListener("scroll", handleScroll, { passive: true });
+  // useEffect(() => {
+  //   document.addEventListener("scroll", handleScroll, { passive: true });
 
-    return document.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   return document.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <div>
