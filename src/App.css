@@ -59,6 +59,13 @@ input[type=submit] {
 	        transition:0.2s ease all;
 }
 
+.tagline {
+  margin-top: -30px;
+  font-family: sans-serif;
+  font-weight: 600;
+  color: #db9618;
+}
+
 @media only screen and (max-width: 600px) {
   .header {
     width: 100%;
@@ -92,6 +99,13 @@ input[type=submit] {
         -ms-transition:0.2s ease all;
          -o-transition:0.2s ease all;
             transition:0.2s ease all;
+  }
+
+  .tagline {
+    margin-top: 0px;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: #db9618;
   }
 }
 
@@ -145,9 +159,3 @@ input[type=submit] {
   transition: all 0.2s;
 }
 
-.tagline {
-  margin-top: -30px;
-  font-family: sans-serif;
-  font-weight: 600;
-  color: #db9618;
-}
